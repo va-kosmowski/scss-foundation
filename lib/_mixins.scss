@@ -1,0 +1,64 @@
+// base mixins, not to be used outside of this file
+@mixin __0host() {
+  @include size(100%);
+}
+
+@mixin __0flex($direction: row, $justify-content: none, $align-items: none) {
+  display: flex;
+  @if $direction != row {
+    flex-direction: $direction;
+  }
+  @if $justify-content != none {
+    justify-content: $justify-content;
+  }
+  @if $align-items != none {
+    align-items: $align-items;
+  }
+}
+
+// global, usable mixins
+@mixin host-block() {
+  @include __0host();
+  display: block;
+}
+
+@mixin host-flex($direction: column, $flex: 1) {
+  @include __0host();
+  @include __0flex($direction);
+  flex: $flex;
+}
+
+@mixin flex-row($justify-content: none, $align-items: none) {
+  @include __0flex(row, $justify-content, $align-items);
+}
+
+@mixin flex-column($justify-content: none, $align-items: none) {
+  @include __0flex(column, $justify-content, $align-items);
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin strict-size($size) {
+  @include size($size);
+  min-width: $size;
+  min-height: $size;
+}
+
+@mixin mat-icon($size) {
+  @include size($size);
+  font-size: $size;
+}
+
+@mixin mat-icon-button($size, $icon-size: none) {
+  @include size($size);
+  line-height: $size;
+
+  @if ($icon-size != none) {
+    .mat-icon {
+      @include mat-icon($size);
+    }
+  }
+}

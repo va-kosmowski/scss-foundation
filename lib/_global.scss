@@ -1,0 +1,6 @@
+@import 'typography';
+@import 'shared';
+
+// styles regarding html, body, common items (buttons, .row's etc), material (except reset-like styles)
+// styles regarding text should be in the _typography.scss
+// styles regarding form fields, buttons, inputs should be either here or in separate _forms.scss, then imported here

@@ -1,0 +1,38 @@
+@import 'palette';
+@import 'mixins';
+//@import 'media-queries'; // optional
+
+// variables go here
+
+// general variables notation (remove this and below):
+//item-property[-propertyDetails][-device]
+//header-height (item-property)
+//sidebar-width-mobile (item-property-device)
+//general-border-color (item-property)
+//general-padding-vertical (item-property-propertyDetails)
+
+// example (remove this and below):
+//$general-padding-tablet: 0 2rem;
+//$general-padding-mobile: 0 1.5rem;
+//$general-border-color: map-get($primary-palette, 300);
+//$general-border: 1px solid $general-border-color;
+//
+//
+//$primary-background-color: map-get($mat-gray, 100);
+//$primary-card-background-color: map-get($mat-gray, 400);
+//
+//$secondary-background-color: map-get($mat-blue-gray, 50);
+//$secondary-card-background-color: map-get($mat-gray, 300);
+//
+//
+//$header-height: 6rem;
+//$header-height-tablet: 5.6rem;
+//$header-height-mobile: 5rem;
+//$header-padding-vertical: 0.5rem;
+//$header-padding-horizontal: 2rem;
+//$header-padding: $header-padding-vertical $header-padding-horizontal;
+//
+//
+//$sidebar-width: 24rem;
+//$sidebar-width-tablet: 18rem;
+//$sidebar-width-mobile: 80%;
